@@ -1,0 +1,191 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FlexBox Nav</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   
+</head>
+<style>
+html{
+      box-sizing: border-box;
+    }
+    
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    }
+    
+    a {
+      color:white;
+      font-weight: 100;
+      letter-spacing: 2px;
+      text-decoration: none;
+      background:rgba(0,0,0,0.2);
+      padding:20px 5px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      transition:all 0.5s;
+    }
+    
+    a:hover {
+      background:rgba(0,0,0,0.3);
+    }
+    
+    .wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding:50px;
+    }
+    
+    /* Flex Box Starts Here! */
+    
+    
+    /* Flex Container */
+    .flex-nav ul {
+      border:1px solid black;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display:flex;
+    }
+    
+    /* Flex Item */
+    .flex-nav li {
+      flex:1;
+    }
+    
+    .flex-nav .social {
+      flex:1;
+    }
+    
+    
+    @media all and (max-width:1000px) {
+      
+      .flex-nav ul {
+        flex-wrap:wrap;
+      }
+    
+      .flex-nav li {
+        flex:1 1 50%;
+      }
+    
+      .flex-nav .social {
+        flex:1 1 25%;
+      }
+    
+    }
+    
+    @media all and (max-width:500px) {
+      
+      .flex-nav li {
+        flex-basis:100%;
+      }
+    
+    }
+    
+    
+    /* .html {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    }
+
+    a {
+        color:white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background:rgba(0,0,0,0.2);
+  padding:20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition:all 0.5s;
+    }
+
+    a:hover {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px;
+    }
+
+    /* .flex-nav {
+        background-color: rgb(0, 0, 0, 0.2);
+    } */
+
+    .flex-nav ul {
+        border: 1px solid black;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        text-align: center;
+    }
+
+    .flex-nav li {
+        flex: 3;
+    }
+
+    .flex-nav .social {
+        flex: 1;
+    }
+
+    @media all and (max-width: 1000px) {
+        flex-ul {
+            flex-wrap: wrap;
+        }
+
+        flex-li {
+            flex: 1 1 50%;
+        }
+        .flex-nav .social{
+            flex:1 1 25%;
+        }
+    }
+    @media all and(max-width:500px){
+        .flex-nav li{
+            flex-basis:100%;
+        }
+    } */
+</style>
+
+<body>
+    <div class="wrapper">
+        <nav class="flex-nav">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#">categories</a></li>
+                <li><a href="#">about </a></li>
+                <li><a href="#">contact</a></li>
+                <li class="social">
+                    <a href="http://facebook.com/wesbos.developer"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li class="social">
+                    <a href="http://github.com/wesbos"><i class="fa fa-github"></i></a>
+                  </li><li class="social">
+                    <a href="http://github.com/wesbos"><i class="fa fa-github"></i></a>
+                  </li>
+                  <li class="social">
+                    <a href="http://instagram.com/wesbos"><i class="fa fa-instagram"></i></a>
+                  </li></ul>
+        </nav>
+    </div>
+</body>
+
+</html>

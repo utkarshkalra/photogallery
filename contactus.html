@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link href="contactstyle.css" rel="stylesheet">
+</head>
+<body>
+    <div class="night">
+        <h1>CONTACT US</h1>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, similique odit inventore fugiat molestias, officiis pariatur saepe mollitia sed voluptatem cupiditate repellendus omnis autem voluptatibus! Velit debitis voluptatibus eaque? Recusandae!</h4>
+        <div class="surface"></div>
+            <div class="car">
+                <img src="img/Bus.png" alt="">
+            </div>
+    </div>
+</body>
+<script src="Jquery3.4.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $surface=$('.surface');
+        $car=$('.car');
+        $img=$('.car img');
+        let flag=true;
+
+        const cars=['img/Bus.png','img/buslightgone.png'];
+
+        $(document).on('keypress',function(e){
+           if(e.which==13){
+               $($surface).toggleClass('moveRight');
+               $($car).toggleClass('suspension');
+               
+           } 
+        })
+        $(document).on('keypress',function(e){
+            if(e.which==119){
+                if(flag){
+                    flag=false;
+                    $img.attr('src',cars[1]);
+                }
+                else{
+                flag=true;
+                $img.attr('src',cars[0]);
+                }
+
+            }
+        })
+
+    });
+</script>
+</html>

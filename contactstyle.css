@@ -1,0 +1,60 @@
+body{
+    margin:0;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+}
+
+.night{
+    height:80vh;
+    width: 70vw;
+    border:1px solid black;
+    margin:5rem auto;
+    background:url(img/busbg.png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0,0,0,0.5);
+    overflow-x: hidden;
+}
+.night h1,h4{
+    text-align: center;
+    color:rgb(189, 156, 197);
+    margin:2rem;
+    margin-right:15rem;
+}
+.surface{
+    height:140px;
+    width:500%;
+    background:url(img/road.png);
+    display: block;
+    position: absolute;
+    bottom:0%;
+    left:0%;
+    background-repeat: repeat-x;
+}
+.car{
+    position: absolute;
+    bottom: 8%;
+    left:24%;
+}
+/**/
+@keyframes moveRight{
+    100%{transform:translateX(-2950px)}
+}
+
+@keyframes suspension{
+   100%{
+      transform: translateY(-1px); 
+   } 
+   50%{
+       transform:translateY(2px);
+   }
+}
+
+.moveRight{
+    animation: moveRight 6s linear infinite;
+}
+
+.suspension{
+    animation: suspension 1s linear infinite;
+
+}

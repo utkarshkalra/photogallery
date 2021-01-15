@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <!--TRYING TO MAKE FORM PHONE FRIENDLY-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--adding css and javascript files-->
+        <style>
+.header1{
+    background: linear-gradient(to left,#1cc2d1 0%,#0063a5 100%);
+    color: white;
+}
+form{
+    text-align: center;
+    /*margin-left: 150px;*/
+    color:#0063a5;
+    text-emphasis:em;
+    font-size:large;
+    }
+span {
+    font-size: smaller;
+}
+span#message2 {
+    color:rgb(136, 132, 132);
+    font-size: smaller;
+}
+span#caution1{
+    color:red;
+    font-size: x-large;
+}
+/*
+.mandatory{
+    color:red;
+    font-size: medium;
+
+}*/
+.required:after { content:" *";
+color:red; }
+.mytable{
+    text-align: left;
+}
+/*p#nextpage{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    color:white;
+}*/
+.rectangle
+{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    color:white;
+    height:5%;
+    width:100%;
+    background: linear-gradient(to left,#01818d 25%,#000000 100%);
+}
+
+        </style>
+
+<!-----------------------JAVASCRIPT FILE--------------------->
+        <script>
+
+function urname()
+{
+    var firstname=document.getElementById("fname").value;
+    if(firstname !="")
+    {
+        document.getElementById("validatename").innerHTML="accepted";
+        document.getElementById("validatename").style.color="green";
+        document.getElementById("fname").style="border:1px solid green";
+        return true;
+    }
+    else
+    {
+        document.getElementById("validatename").innerHTML="(!) Please enter your name";
+        document.getElementById("validatename").style.color="red";
+        document.getElementById("fname").style="border:1px solid red";
+
+    }
+}
+function emailid()
+{
+    var compare=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var emailinput=document.getElementById("emadd").value;
+    if(compare.test(emailinput))
+    {
+        document.getElementById("validateemail").innerHTML="accepted";
+        document.getElementById("validateemail").style.color="green";
+        document.getElementById("emadd").style="border:1px solid green";
+        return true;
+    }
+    else{
+        document.getElementById("validateemail").innerHTML="(!) Not a Valid Email";
+        document.getElementById("validateemail").style.color="red";
+        document.getElementById("emadd").style="border:1px solid red";
+    }
+}
+
+
+function urpassword()
+{
+    var pass1=document.getElementById("password1").value;
+    if(pass1.length>5)
+    {
+        document.getElementById("passkeyspan").innerHTML="good password";
+        document.getElementById("passkeyspan").style.color="green";
+        document.getElementById("password1").style="border:1px solid green";
+        return true;
+    }
+    else
+    {
+        document.getElementById("passkeyspan").innerHTML="(!) Please enter your password (atleast 5 character long)";
+        document.getElementById("passkeyspan").style.color="red";
+        document.getElementById("password1").style="border:1px solid red";
+
+    }
+}
+function urpassword2(){
+    var pass1=document.getElementById("password1").value;
+    var pass2=document.getElementById("password2").value;
+    if(pass2!==pass1)
+    {
+    document.getElementById("passkeyspan2").innerHTML="(!) Passwords doesn't Match!!";
+    document.getElementById("passkeyspan2").style.color="red";
+    document.getElementById("password2").style="border:1px solid red";
+    }
+    else 
+    {
+    document.getElementById("passkeyspan2").innerHTML="";
+    document.getElementById("password2").style="border:1px solid green";
+    return true;
+    }
+}
+ function donebutton()
+ {
+     var val= true 
+     val= urpassword() && val 
+     val= urpassword2() && val
+     val=urname() && val
+     val=emailid() && val
+
+    
+    if(val)
+     {
+       document.write("congrats you have successfully signed in to our page"); 
+     }
+     else
+     {
+         alert("sorry some of values you entered are incorrect");
+     }
+ }
+        </script>
+        
+        <!------------------------------------------------->
+       
+        <BODY>
+            <div class="header1">
+            <H2 style="text-align: center;">Sign-up to Our Page</H2>
+                <p style="text-align: center;margin-left: 2%;margin-right:2% ;font-size: small;">
+                <i>So, this is a basic "SIGN UP FORM". It has been created in order to
+                    take some information which are usually required in a sign up form of 
+                    any website.
+                    For example , name of a person ,email adress, phone number ,password , gender etc.</i></p>
+                    <p style="text-align: center;margin-left: 2%;margin-right:2% ;font-size: small;"><i>
+                    I am using normal input fields ,password fields , radio button, list and button.
+                   <u>Javascript</u> has been used for validation purposes and <u>CSS</u> for styling purposes.
+                    No "Submit-type Button" is used in this form. 
+                </i>
+                </p>
+            </div>
+            <br>
+            
+        <form>
+            <table class="mytable" align="center">
+                    <!--FIRST NAME-->
+                    <TR>
+                    <td><label for="fname" class="required">First name:</label></td>
+                    <td><input type="text" id="fname" name="fname" onblur="urname()"></td></TR>
+                    <tr><td></td><td><span id="validatename"></span></td></tr>
+                      
+                    
+                    <!--LAST NAME-->
+
+                    <tr>
+                    <td><label for="lname">Last Name:</label></td>
+                    <td><input type="text" id="lname" name="lname"></td>
+                    </tr>
+                    
+                    <!--email id-->
+                    
+                    <tr>
+                        <td><label for="fname" class="required">Email Address:</label></td>
+                            <td><input type="email" id="emadd" name="emadd" onblur="emailid()"></td></tr>
+                            <tr><td></td><td><span id="validateemail"></span></td></tr>
+
+                    <!--password-->
+
+                    <tr>
+                        <td><label for="password1" class="required">Password:</label></td>
+                        <td><input type="password" id="password1" name="password1" onblur="urpassword()"></td></tr>
+                        <tr><td></td><td><span id="passkeyspan"></span></td></tr>
+
+                    <!--confirm password-->
+
+                    <tr>
+                        <td><label for="password2">Confirm-Password:</label></td>
+                        <td><input type="password" id="password2" name="password2" onblur="urpassword2()"></td></tr>
+                        <tr><td></td><td><span id="passkeyspan2"></span></td></tr>   
+
+                    <!--phone number-->
+                    
+                    <tr>
+                        <td><label for="phnum">Phone Number:</label></td>
+                            <td><input type="number" id="phnum" name="phnum"></td></tr>
+                            <tr><td></td><td><span id="message2">xxx-xxx-xxxx</span></td>
+                    </tr>
+                    
+
+                    <!--date of birth-->
+                    
+                    <tr>
+                        <td><label for="dob">Date of Birth:</label></td>
+                            <td><input type="date" id="dob" name="dob"></td>
+                    </tr>
+                    </table>
+
+                    <!--using radio buttons-->
+                    
+                    
+                    
+                <table class="mytable" align="center">
+                    <tr><td><p>Enter your Gender</p></td></tr>
+                    <tr>
+                        <td><label for "male">Male</label></td>
+                        <td><input type="radio" id="male" name="gender1" value="male"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for "female">Female</label></td>
+                            <td><input type="radio" id="female" name="gender1"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><label for "other">Other</label></td>
+                            <td><input type="radio" id="other" name="gender1"></td>
+                    </tr>
+
+                </table>
+                    
+                   
+                    <!--using drop down list-->
+                    <label for "workstat">Current Working Status</label>
+                    <select id="workstat" name="workstat">
+                        <option value="student1">Student</option>
+                        <option value="unemp">Unemployed</option>
+                        <option value="empl">Employed</option>
+                        <option value="ratnotspec">Rather not specify</option>
+                    </select>
+                    <br><br>
+
+                    <!--adding buttons-->
+
+                    <button id="button1" type="button" onclick="donebutton()">Done</button>
+                    
+        </form>
+        <p>CAUTION! fields marked as <span id="caution1">*</span> mandatory to fill. </p>
+        
+        <!--<script src="htmlform.js"></script>-->
+        </BODY>
+        
+    </HEAD>
+</HTML>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHOTO GALLERY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--       linking owl carousel       -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
+    
+    <!--.----------------------.-------------.-->
+
+    <link rel="stylesheet" href="aos.css">
+
+</head>
+
+<body>
+    <!--nav-->
+
+    <nav class="nav" id="me">
+        <!--ID added to make javascript work-->
+
+        <div class="nav-menu flex-row">
+            <div class="name">
+                <a href="#" class="textgrey">UTKARSH</a>
+            </div>
+
+            <div class="togglecollapse" onclick="toggling()">
+
+                <div class="toggleicon">
+                    <i class="fa fa-bars" id="bar"></i>
+                </div>
+
+            </div>
+
+
+            <div>
+                <ul class="navitems">
+                    <li class="navlink">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="navlink">
+                        <a href="#">category</a>
+                    </li>
+                    <li class="navlink">
+                        <a href="sitecontent.html">archives</a>
+                    </li>
+                    <li class="navlink">
+                        <a href="pages.html">pages</a>
+                    </li>
+                    <li class="navlink">
+                        <a href="contactus.html">contact us</a>
+                    </li>
+                    <li class="navlink">
+                        <a href="signin.html">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social textgrey">
+                <a href="#">
+                    <i class="fa fa-home"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope-square"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--main-->
+
+    <main>
+        <section class="sitetitle">
+            <div class="sitebg" data-aos ="fade-up">
+                <h3>Amazing photos all for you</h3>
+                <h1>PHOTO GALLERY</h1>
+                <button class="btn">Explore</button>
+                <p style="color:white;margin:2rem 1.5rem;">Lorem ipsum , ratione? Ea placeat repellendus ad labore repudiandae praesentium eaque laboriosam odit adipisci hic. Vero tenetur quas voluptatem, illo sed veritatis exercitationem necessitatibus alias. Quibusdam, earum!</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="blog">
+                <div class="container">
+                    <!--owl container-->
+                    <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="img/graphic.jpg" alt="graphic design">
+                            <div class="blogtitle">
+                                <h3>Here are some graphic designs</h3>
+                                <button class="btn blogbtn">Go Ahead!</button>
+                                <!--<span>2 minutes</span>-->
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
+                            <img src="img/photography.jpg" alt="graphic design">
+                            <div class="blogtitle">
+                                <h3>Here are some graphic designs</h3>
+                                <button class="btn blogbtn">Go Ahead!</button>
+                                <!--<span>2 minutes</span>-->
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
+                            <img src="img/vidonphone.jpg" alt="graphic design">
+                            <div class="blogtitle">
+                                <h3>Videography is surely an interesting topic</h3>
+                                <button class="btn blogbtn">Go Ahead!</button>
+                                <!--<span>2 minutes</span>-->
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="img/graphic.jpg" alt="graphic design">
+                            <div class="blogtitle">
+                                <h3>Here are some graphic designs</h3>
+                                <button class="btn blogbtn">Go Ahead!</button>
+                                <!--<span>2 minutes</span>-->
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev" style="background:transparent; font-size: 2rem;">
+                            <i class="fa fa-arrow-circle-left"></i>
+                        </span>
+                        <span class="owl-nav-next" style="background:transparent; font-size: 2rem;">
+                            <i class="fa fa-arrow-circle-right"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-------------------------------footer-------------->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about">
+                <h2>about us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor optio asperiores accusamus! Quos,
+                    illum esse provident
+                    exercitationem voluptas dignissimos nostrum accusamus.</p>
+            </div>
+            <div class="newsletter">
+                <h2>Newsletter</h2>
+                <p>Lorem,adipisicing elit. Porro quidem deleniti, vitae odio quis
+                    itaque.</p>
+                <input type="text" placeholder="Email"><span>&nbsp;<i class="fa fa-arrow-right"
+                        style="font-size:1.5rem; color:cyan"></i></span>
+
+            </div>
+            <div class="instagram">
+                <h2>Instagram</h2>
+                <div class="flex-row">
+                    <img src="img/blogbg.jpg" alt="insta1">
+                    <img src="img/blogbg.jpg" alt="insta2">
+                    <img src="img/blogbg.jpg" alt="insta3">
+                </div>
+                <div class="flex-row">
+                    <img src="img/blogbg.jpg" alt="insta4">
+                    <img src="img/blogbg.jpg" alt="insta5">
+                    <img src="img/blogbg.jpg" alt="insta6">
+                </div>
+            </div>
+            <div class="follow">
+                <h2>follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                    <i class="fa fa-facebook" style="color:white;"></i>
+                    <i class="fa fa-twitter" style="color:white;"></i>
+                    <a href="https://www.instagram.com/_ambivert_guy_/"><i class="fa fa-instagram" style="color:white;"></i></a>
+                    <i class="fa fa-youtube" style="color:white;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="move-up">
+            <span><i class="fa fa-arrow-circle-up fa-3x"></i></span>
+        </div>
+    </footer>
+
+
+
+    <!-- adding jquery and js file for carousel -->
+    <script src="Jquery3.4.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+
+    <script src="aos.js"></script>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
